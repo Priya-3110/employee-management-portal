@@ -8,6 +8,7 @@ const authRoutes = require('./routes/authRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const employeeRoutes = require('./routes/employeeRoutes');
 const projectRoutes = require('./routes/projectRoutes');
+const recommendationRoutes = require('./routes/recommendationRoutes');
 const { protect } = require('./middleware/authMiddleware');
 const { errorHandler, notFound } = require('./middleware/errorMiddleware');
 
@@ -40,6 +41,7 @@ app.use('/api/dashboard', protect, dashboardRoutes);
 app.use('/api/employees', protect, employeeRoutes);
 app.use('/api/projects', protect, projectRoutes);
 app.use('/api/assignments', protect, assignmentRoutes);
+app.use('/api/recommendations', protect, recommendationRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

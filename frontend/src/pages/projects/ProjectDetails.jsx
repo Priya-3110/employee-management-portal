@@ -73,9 +73,14 @@ const ProjectDetails = () => {
       <section className="section-panel p-5">
         <div className="mb-4 flex items-center justify-between">
           <h3 className="text-lg font-bold text-slate-950">Assigned Employees</h3>
-          <Link to="/assignments/assign" className="btn-secondary">
-            Manage
-          </Link>
+          <div className="flex gap-2">
+            <Link to={`/projects/${project.id}/recommendations`} className="btn-secondary text-blue-600 bg-blue-50 border-blue-100 hover:bg-blue-100 hover:border-blue-200">
+              Smart Recommendations
+            </Link>
+            <Link to="/assignments/assign" className="btn-secondary">
+              Manage
+            </Link>
+          </div>
         </div>
         {project.employees?.length ? (
           <div className="grid gap-3 md:grid-cols-2">

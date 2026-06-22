@@ -8,9 +8,11 @@ import Login from './pages/Login.jsx';
 import EmployeeDetails from './pages/employees/EmployeeDetails.jsx';
 import EmployeeForm from './pages/employees/EmployeeForm.jsx';
 import EmployeeList from './pages/employees/EmployeeList.jsx';
+import AvailabilityTracking from './pages/employees/AvailabilityTracking.jsx';
 import ProjectDetails from './pages/projects/ProjectDetails.jsx';
 import ProjectForm from './pages/projects/ProjectForm.jsx';
 import ProjectList from './pages/projects/ProjectList.jsx';
+import SmartRecommendations from './pages/assignments/SmartRecommendations.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 const App = () => (
@@ -30,10 +32,12 @@ const App = () => (
       <Route path="employees/add" element={<EmployeeForm />} />
       <Route path="employees/:id" element={<EmployeeDetails />} />
       <Route path="employees/:id/edit" element={<EmployeeForm />} />
+      <Route path="availability" element={<AvailabilityTracking />} />
       <Route path="projects" element={<ProjectList />} />
       <Route path="projects/add" element={<ProjectForm />} />
       <Route path="projects/:id" element={<ProjectDetails />} />
       <Route path="projects/:id/edit" element={<ProjectForm />} />
+      <Route path="projects/:projectId/recommendations" element={<SmartRecommendations />} />
       <Route path="assignments" element={<ManageAssignments />} />
       <Route path="assignments/assign" element={<AssignEmployees />} />
     </Route>

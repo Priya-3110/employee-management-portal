@@ -5,6 +5,7 @@ const navItems = [
   { to: '/employees', label: 'Employees', icon: 'E' },
   { to: '/projects', label: 'Projects', icon: 'P' },
   { to: '/assignments', label: 'Assignments', icon: 'A' },
+  { to: '/availability', label: 'Availability', icon: 'V' },
 ];
 
 const SidebarContent = ({ onClose }) => (
